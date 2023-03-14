@@ -1,0 +1,67 @@
+.header {
+    margin-bottom: 3rem;
+    .logo {
+        width: 100px;
+    }
+
+    .nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .links {
+            display: flex;
+            align-items: center;
+            list-style-type: none;
+            gap: 1.5rem;
+
+            li a {
+                text-decoration: none;
+                &.active {
+                    color: red;
+                }
+            }
+        }
+    }
+
+    .nav2 {
+        margin-top: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+
+        .inputGroup {
+            max-width: 800px;
+            flex-basis: 80%;
+            position: relative;
+            .inputItem {
+                padding: .5rem 1rem;
+                width: 100%;
+            }
+
+            .searchButton {
+                position: absolute;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                width: 3rem;                
+            }
+        }
+
+        .shoppingCartDiv {
+            display: flex;
+            align-items: center;
+            i {
+                margin-right: .5rem;
+                font-size: 2rem;
+            }
+            .itemsNumber {
+                padding: .5rem .8rem;
+                border-radius: 50%;
+                background-color: black;
+                color: #fff;
+            }
+        }
+    }
+}
