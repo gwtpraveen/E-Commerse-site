@@ -1,9 +1,10 @@
 import "../style/Card.scss";
+import { useNavigate } from "react-router-dom";
 
 export default function Card ({object}) {
-    console.log(object)
+    const navigate = useNavigate();
     return (
-            <div className="card">
+            <div className="card" onClick={() => navigate(`/product/${object._id}`)}>
                 <img src={object.image} alt="" className="productImage"/>
                 <div className="detailsDiv">
                     <p className="price">${object.price.toFixed(2)}</p>

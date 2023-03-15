@@ -1,19 +1,39 @@
 import "../style/Card.scss";
-import data from "../data.json";
+import productsData from "../data.json";
 import Card from "../components/Card";
 import Header from "../components/Header";
+import { useState } from "react";
+import { Outlet } from "react-router-dom";
+import Footer from "../components/Footer";
 
 export default function Root() {
-    console.log("root",data[0])
+    const [cart, setCart] = useState([]);
+    const [data, setData] = useState(productsData);
+    const addToCart = (product) => {
+        setCart(prevCart => {
+            console.log(prevCart)
+            let cart = [...prevCart];
+            cart.push(product);
+            return cart;
+        })
+    };
+
+    const removeCartItem = (id) => {
+        setCart(prevCart => {
+            let cart = [...prevCart];
+            return cart.filter(item => item.id != id);
+        })
+    }
     return (
         <>
-            <Header/>
+            <Header cart={cart} onRemoveCartItem={removeCartItem}/>
             <main>
                 <div>
-                    <Card object={data[0]}/>
-                    {/* <img src="/Images/banner 1.jpg" alt="" /> */}
+                    <Outlet  context={[data, addToCart]}/>
+                    {/* <img src="/Images/banner 1.jpg" alt="" /> */}                
                 </div>
             </main>
+            <Footer/>
         </>
     );
 };

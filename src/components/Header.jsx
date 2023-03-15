@@ -1,7 +1,7 @@
 import "../style/Header.scss";
 import { NavLink } from "react-router-dom";
 
-export default function Header () {
+export default function Header ({cart, onRemoveCartItem}) {
     return (
             <header className="header">
                 <nav className="nav">
@@ -21,7 +21,19 @@ export default function Header () {
                     </div>
                     <div className="shoppingCartDiv">
                         <i className="fa-solid fa-cart-shopping shoppingCart"></i>
-                        <span className="itemsNumber">1</span>
+                        {cart.length !== 0 ? <span className="itemsNumber">{cart.length}</span> : null}
+                        <div>
+                            {cart && cart.map(item => 
+                                <div key={item.id}>
+                                    <div>
+                                        <p>{item.name}</p>
+                                        <p>{item.quantity} X {item.price}</p>
+                                    </div>
+                                    <button onClick={() => onRemoveCartItem(item.id)}>X</button>
+                                </div>
+                                )
+                            }
+                        </div>
                     </div>
                 </div>
             </header>
