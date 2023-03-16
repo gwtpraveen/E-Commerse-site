@@ -5,7 +5,10 @@ export default function Home() {
     const [data] = useOutletContext();
     return (
         <>
-            <Card object={data[0]}/>
+        {
+            data.map(item => <Card key={item._id} object={item}/>)
+        }
+            
         </>
     )
 }

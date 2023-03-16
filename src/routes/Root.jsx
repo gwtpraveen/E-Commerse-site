@@ -11,7 +11,6 @@ export default function Root() {
     const [data, setData] = useState(productsData);
     const addToCart = (product) => {
         setCart(prevCart => {
-            console.log(prevCart)
             let cart = [...prevCart];
             cart.push(product);
             return cart;
@@ -23,10 +22,15 @@ export default function Root() {
             let cart = [...prevCart];
             return cart.filter(item => item.id != id);
         })
-    }
+    };
+
+    const handleSearch = (userSearch) => {
+        console.log(userSearch);
+    };
+
     return (
         <>
-            <Header cart={cart} onRemoveCartItem={removeCartItem}/>
+            <Header cart={cart} onRemoveCartItem={removeCartItem} onSearch={handleSearch}/>
             <main>
                 <div>
                     <Outlet  context={[data, addToCart]}/>
