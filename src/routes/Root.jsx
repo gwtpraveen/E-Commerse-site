@@ -24,13 +24,9 @@ export default function Root() {
         })
     };
 
-    const handleSearch = (userSearch) => {
-        console.log(userSearch);
-    };
-
     return (
         <>
-            <Header cart={cart} onRemoveCartItem={removeCartItem} onSearch={handleSearch}/>
+            <Header cart={cart} onRemoveCartItem={removeCartItem} />
             <main>
                 <div>
                     <Outlet  context={[data, addToCart]}/>

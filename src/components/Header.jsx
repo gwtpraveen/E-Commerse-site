@@ -2,6 +2,8 @@ import "../style/Header.scss";
 import { NavLink } from "react-router-dom";
 
 export default function Header ({cart, onRemoveCartItem}) {
+
+
     return (
             <header className="header">
                 <nav className="nav">
@@ -13,12 +15,12 @@ export default function Header ({cart, onRemoveCartItem}) {
                     </ul>
                 </nav>
                 <div className="nav2">
-                    <div className="inputGroup">
+                    <form className="inputGroup" method="get" action="/result">
                         <input type="text" name="search" id="search" className="inputItem" placeholder="Search" autoFocus/>
                         <button type="submit" className="searchButton">
                             <i className="fa-solid fa-magnifying-glass"></i>
                         </button>
-                    </div>
+                    </form>
                     <div className="shoppingCartDiv">
                         <i className="fa-solid fa-cart-shopping shoppingCart"></i>
                         {cart.length !== 0 ? <span className="itemsNumber">{cart.length}</span> : null}

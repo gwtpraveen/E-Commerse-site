@@ -10,6 +10,7 @@ import AdminLog from "./routes/AdminLog";
 import ProductPage from "./routes/ProductPage";
 import Home from "./components/Home";
 import "./index.css";
+import SearchResult from "./components/SearchResult";
 
 const router = createBrowserRouter([
   {
@@ -24,7 +25,10 @@ const router = createBrowserRouter([
       {
         path: "/product/:id",
         element: <ProductPage/>
-      }   
+      }, {
+        path: "/result",
+        element: <SearchResult/>
+      }  
     ]
   }, {
     path: "/ec-admin",
