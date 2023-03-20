@@ -1,0 +1,33 @@
+.login {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .h1 {
+        margin-bottom: 2rem;
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+
+        .inputFeild {
+            padding: .5rem 1rem;
+        }
+
+        .loginBtn {
+            padding: .5rem 1rem;
+        }
+
+        .link {
+            padding: 0;
+            align-self: flex-start;
+            font-size: .8rem;
+        }
+    }
+
+}

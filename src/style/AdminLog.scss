@@ -1,0 +1,26 @@
+.adminLog {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .h1 {
+        margin-bottom: 2rem;
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+
+        :not(input[type=submit]) {
+            padding: .5rem 1rem;
+        }
+
+        input[type=submit] {
+            padding: .5rem 1rem;
+        }
+    }
+}
