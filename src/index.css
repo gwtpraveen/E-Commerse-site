@@ -5,8 +5,8 @@
 }
 
 body {
-    padding: 1rem;
     max-width: 1200px;
     margin: auto;
     font-family: sans-serif;
+    min-height: 100vh;
 }
