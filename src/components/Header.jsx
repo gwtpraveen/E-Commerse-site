@@ -23,7 +23,7 @@ export default function Header ({cart, onRemoveCartItem}) {
                     </form>
                     <div className="shoppingCartDiv">
                         <i className="fa-solid fa-cart-shopping shoppingCart"></i>
-                        {cart.length !== 0 ? <span className="itemsNumber">{cart.length}</span> : null}
+                        <span className="itemsNumber">{cart.length}</span>
                         <div>
                             {cart && cart.map(item => 
                                 <div key={item.id}>

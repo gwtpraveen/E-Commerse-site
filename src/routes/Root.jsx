@@ -1,5 +1,5 @@
 import "../style/Card.scss";
-import productsData from "../data.json";
+import productsData from "../database/data.json";
 import Card from "../components/Card";
 import Header from "../components/Header";
 import { useState } from "react";
