@@ -14,6 +14,8 @@ import SearchResult from "./components/SearchResult";
 import LogIn from "./routes/Login";
 import DashBoard from "./routes/Dashboard";
 import AddNewProduct from "./routes/AddNewProducts";
+import Signup from "./routes/Signup";
+import ShopSignup from "./routes/ShopSignup";
 
 const router = createBrowserRouter([
   {
@@ -39,6 +41,12 @@ const router = createBrowserRouter([
   }, {
     path: "/login",
     element: <LogIn/>
+  }, {
+    path: "/signup",
+    element: <Signup />
+  }, {
+    path: "/shopsignup",
+    element: <ShopSignup/>
   }, {
     path: "/:userId/dashboard",
     element: <DashBoard/>,

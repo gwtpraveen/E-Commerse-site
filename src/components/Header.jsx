@@ -9,9 +9,9 @@ export default function Header ({cart, onRemoveCartItem}) {
                 <nav className="nav">
                     <img src="/Images/logo1.png" alt="logo" className="logo"/>
                     <ul className="links">
-                        <li><NavLink to="/">HOME</NavLink></li>
-                        <li><NavLink to="/log-in">LOG IN</NavLink></li>
-                        <li><NavLink to="/sign-up">SIGN UP</NavLink></li>
+                        <li><NavLink to="/home">HOME</NavLink></li>
+                        <li><NavLink to="/login">LOG IN</NavLink></li>
+                        <li><NavLink to="/signup">SIGN UP</NavLink></li>
                     </ul>
                 </nav>
                 <div className="nav2">

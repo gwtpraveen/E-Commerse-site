@@ -6,6 +6,8 @@ import { useState } from "react";
 import { Outlet } from "react-router-dom";
 import Footer from "../components/Footer";
 
+import "../firebase/config";
+
 export default function Root() {
     const [cart, setCart] = useState([]);
     const [data, setData] = useState(productsData);
