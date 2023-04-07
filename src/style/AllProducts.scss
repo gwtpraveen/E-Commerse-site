@@ -1,0 +1,23 @@
+.products {
+    width: 100%;
+    .productCard {
+        display: flex;
+        gap: 1rem;
+        justify-content: space-between;
+        .productImage {
+            flex-shrink: 0;
+            width: 150px;
+            height: 150px;
+            background-color: red;
+        }
+
+        .productDetailsDiv {
+            width: 100%;
+        }
+
+        .productsButtons {
+            display: flex;
+            gap: 1rem;
+        }
+    }
+}
