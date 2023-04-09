@@ -16,6 +16,7 @@ import DashBoard from "./routes/Dashboard";
 import AddNewProduct from "./routes/AddNewProducts";
 import Signup from "./routes/Signup";
 import ShopSignup from "./routes/ShopSignup";
+import AllProducts from "./routes/AllProducts";
 
 const router = createBrowserRouter([
   {
@@ -54,6 +55,10 @@ const router = createBrowserRouter([
       {
         path: "/:userId/dashboard/addnewproduct",
         element: <AddNewProduct/>
+      }, 
+      {
+        path: "/:userId/dashboard/allproducts",
+        element: <AllProducts/>
       }
     ]
   }
