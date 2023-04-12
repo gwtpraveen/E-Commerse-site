@@ -1,0 +1,97 @@
+.row {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    .imageDiv {
+        .mainImage {
+            width: 400px;
+            height: 400px;
+        }
+
+        .smallPhotoRow {
+            display: flex;
+            justify-content: space-between;
+            img {
+                width: 95px;
+                height: 95px;
+            }
+        }
+    }
+
+    .reviewsDiv {
+        margin-top: .6rem;
+        display: flex;
+        gap: 1rem;
+
+        .reviewNumber {
+            font-size: .7rem;
+            align-self: flex-end;
+        }
+    }
+
+    .price {
+        margin-top: .6rem;
+        font-weight: bolder;
+        font-size: 1.2rem;
+    }
+
+    .orders {
+        font-size: .9rem;
+    }
+
+    .optionsDiv {
+        margin-top: .6rem;
+        margin-bottom: .6rem;
+
+        .optionsRow {
+            margin-top: .4rem;
+            display: flex;
+            gap: 1rem;
+        }
+
+        button {
+            padding: .5rem 1rem;
+        }
+    }
+
+    .quantity {
+        font-size: .9rem;
+    }
+    .quantityDiv {
+        margin-top: .2rem;
+        margin-bottom: .6rem;
+        display: flex;
+        gap: 1rem;
+        button {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        input {
+            width: 100px;
+            padding-left: 1rem;
+        }
+
+    }
+    .stockNumber {
+        font-size: .8rem;
+    }
+
+    .buttonDiv {
+        margin-top: .4rem;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        button {
+            padding: .5em 1em;
+        }
+    }
+
+
+
+
+}

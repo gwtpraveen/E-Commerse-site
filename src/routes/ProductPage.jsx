@@ -1,5 +1,6 @@
 import { useParams, useOutletContext } from "react-router-dom";
 import { useState, useRef } from "react";
+import "../style/ProductPage.scss";
 
 export default function ProductPage() {
     const parms = useParams();
@@ -39,13 +40,19 @@ export default function ProductPage() {
     return (
         <>
             <h1>{product.name}</h1>
-            <div>
-                <div>
-                    <img src={product.image} alt="" />
+            <div className="row">
+                <div className="imageDiv">
+                    <img src={product.image} alt="" className="mainImage"/>
+                    <div className="smallPhotoRow">
+                        <img src={product.image} alt="" />
+                        <img src={product.image} alt="" />
+                        <img src={product.image} alt="" />
+                        <img src={product.image} alt="" />
+                    </div>
                 </div>
                 <div>
-                    <p>{product.discriptionShort}</p>
-                    <div>
+                    <p className="productSmall">{product.discriptionShort}</p>
+                    <div className="reviewsDiv">
                         <p>
                             <i className="fa-sharp fa-solid fa-star" style={{color : "#e1b01b"}}></i>
                             <i className="fa-sharp fa-solid fa-star" style={{color : "#e1b01b"}}></i>
@@ -53,23 +60,28 @@ export default function ProductPage() {
                             <i className="fa-sharp fa-solid fa-star" style={{color : "#e1b01b"}}></i>
                             <i className="fa-sharp fa-solid fa-star" style={{color : "#e1b01b"}}></i>
                         </p>
-                        <p>55 reviews</p>
-                        <p>{product.totalSold}+ orders</p>
+                        <p className="reviewNumber">55 reviews</p>
                     </div>
-                    <p>${product.price.toFixed(2)}</p>
-                    <div>
-                        <p>opctions</p>
+                    <p className="orders">{product.totalSold}+ orders</p>
+                    <p className="price">${product.price.toFixed(2)}</p>
+                    <div className="optionsDiv">
+                        <p>options</p>
+                        <div className="optionsRow">
+                            <button>opction1</button>
+                            <button>opciton2</button>
+                            <button>opction3</button>
+                        </div>
                     </div>
-                    <p>Quantity</p>
+                    <p className="quantity">Quantity</p>
                     <div>
-                        <div>
+                        <div className="quantityDiv">
                             <button onClick={() => handleQuantityChange("-")}>-</button>
                             <input type="number" name="" id="" min={0} value={quantity} onChange={() => handleQuantityChange("value")} ref={quantityValue} onBlur={handleBlur}/>
                             <button onClick={() => handleQuantityChange("+")}>+</button>
                         </div>
-                        <p>27 pieces Available</p>
+                        <p className="stockNumber">27 pieces Available</p>
                     </div>
-                    <div>
+                    <div className="buttonDiv">
                         <button>Buy Now</button>
                         <button onClick={() => addToCart({
                             id: product._id,
@@ -78,9 +90,9 @@ export default function ProductPage() {
                             quantity: quantity
                         })}>Add to Cart</button>
                     </div>
-                    <p>{product.discriptionLong}</p>
                 </div>
             </div>
+            <p>{product.discriptionLong}</p>
         </>
     )
 }
