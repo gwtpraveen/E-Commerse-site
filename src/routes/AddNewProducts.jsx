@@ -17,10 +17,9 @@ export default function AddNewProduct() {
             discountPrecentage: e.target.discountPrecentage.value,
             descriptionShort: e.target.shortDescription.value,
             descriptionLong: e.target.longDescription.value,
-            keywords: e.target.keywords.value.split(","),
-            mainImage: mainImageUrl
+            keywords: e.target.keywords.value.split(",")
         }
-        // addProduct(productObject);
+        addProduct(productObject);
         // uploadProductImage(e.target.mainImage.files[0]);
         // console.log(e.target.mainImage.files[0])
         // console.log(e.target.file.files[0])
@@ -30,13 +29,7 @@ export default function AddNewProduct() {
     console.log(e.target.value.split("\\"))
         const images = e.target.files;
         const [file] = e.target.files;
-        e.target.parentElement.style.backgroundImage = `url(${URL.createObjectURL(file)})`
-        // for(let imge of images) {
-        //     console.log(imge)
-        // }
-        // console.log(e.target.files);
-        // console.log(file)
-        // setMainImage(URL.createObjectURL(file));
+        e.target.parentElement.style.backgroundImage = `url(${URL.createObjectURL(file)})`;
     }
     return (
         <>
@@ -47,7 +40,7 @@ export default function AddNewProduct() {
                     <input type="text" name="productName" id="productName" placeholder="Product Name" className="input"/>
                 </div>
                 <div className="images">
-                    <label className="mainImage">
+                    <label className="mainImage" data-link="">
                         <input type="file" onChange={handleImageUpload}/>
                         <p>Main Image</p>
                     </label>
